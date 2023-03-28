@@ -1,0 +1,232 @@
+{
+  "JDE": {
+    "insert": {
+      "budget": "EXEC bgt.AddBudgetDetails @BudgetYear=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@ClientCode=?,@LookupCode=?,@ProducerCode=?,@SrvPrCode=?,@BusinessLine=?,@Currency=?,@AccountingMonth=?,@BudgetAmount=?,@Status=?;",
+      "businessunits": "EXEC jde.AddUpdateBusinessUnit @BUNo=?,@BUName=?,@BalanceSheetBUNo=?,@BalanceSheetBUName=?,@SegmentCode=?,@Segment=?,@DivisionCode=?,@Division=?,@RegionCode=?,@Region=?,@BranchCode=?,@Branch=?,@SatelliteCode=?,@Satelllite=?,@DepartmentCode=?,@Department=?,@DivisionBranchGroupCode=?,@DivisionBranchGroup=?,@ReportingGroupCode=?,@ReportingGroup=?,@CompanyNo=?,@Company=?,@FEINCode=?,@FEIN=?,@LocalCurrency=?,@ReportingAcquisitionCode=?,@ReportingAcquisition=?,@AcquiredDate=?,@AcquisitionTrackerCode=?,@AcquisitionTracker=?,@IntegrationRollupCode=?,@IntegrationRollup=?,@DomesticForeignTypeCode=?,@DomesticForeignType=?,@CountryCode=?,@Country=?,@StateCode=?,@State=?,@CityCode=?,@City=?,@AccountingCenterCode=?,@AccountingCenter=?,@CategoryCode=?,@Category=?,@Active=?,@AccountType=?,@ContinuedOperationsCode=?,@ContinuedOperations=?,@GroupFunctionCode=?,@GroupFunction=?,@DivisionsWithAcquisitionCode=?,@DivisionsWithAcquisition=?,@SegmentSplitCode=?,@SegmentSplit=?,@MiscRollup01Code=?,@MiscRollup01=?,@MiscRollup02Code=?,@MiscRollup02=?,@MiscRollup03Code=?,@MiscRollup03=?,@OldIntercompanyCode=?,@OldIntercompany=?,@BudgetedOverrideCode=?,@BudgetedOverride=?,@BalanceSheetRollup01Code=?,@BalanceSheetRollup01=?,@BalanceSheetRollup02Code=?,@BalanceSheetRollup02=?,@LineofBusinessCode=?,@LineofBusiness=?,@DealIDCode=?;",
+      "chartofaccounts": "EXEC jde.AddUpdateChartOfAccounts @AccountNo=?,@AccountName=?,@AccountLevel1No=?,@AccountLevel1Name=?,@AccountLevel2No=?,@AccountLevel2Name=?,@AccountLevel3No=?,@AccountLevel3Name=?,@AccountLevel4No=?,@AccountLevel4Name=?,@AccountLevel5No=?,@AccountLevel5Name=?,@AccountLevel6No=?,@AccountLevel6Name=?,@AccountLevel7No=?,@AccountLevel7Name=?,@PostableFlag=?;",
+      "employees": "EXEC jde.AddUpdateEmployee @GroupFunction=?,@BUNo=?,@EmployeeNum=?,@FirstName=?,@MiddleName=?,@LastName=?,@EmailAddress=?,@JobTitle=?,@FunctionalArea=?,@ActiveTerminate=?,@HireYear=?,@HireMonth=?,@HireDate=?,@TermYear=?,@TermMonth=?,@TermDate=?,@HeadCount=?,@FTECount=?;",
+      "fxrates": "EXEC jde.AddUpdateFxRates @Source=?,@FromCurrency=?,@ToCurrency=?,@EffectiveDate=?,@ExchangeRate=?,@ExchangeRateInverse=?;",
+      "concurdata": "EXEC jde.AddConcurDetail @ReportType=?,@ExpenseLedgerType=?,@Policy=?,@Division=?,@EmployeeNum=?,@ActiveTerminated=?,@EmployeeFirstName=?,@EmployeeLastName=?,@ReportName=?,@ReportPurpose=?,@ExpenseType=?,@ItemPurpose=?,@GLAccount=?,@Vendor=?,@TransactionDate=?,@PaidDate=?,@PaidMonth=?,@PaidYear=?,@AllocatedApprovedAmount=?,@AllocatedNetofTax=?,@ApprovedNetofTax=?,@CurrencyCode=?,@ClaimNumber=?,@Client=?,@NumberofAttendees=?,@AttendeeName=?,@AttendeeCompany=?,@AttendeeType=?,@BusinessDistance=?,@AirlineExpenseType=?,@TravelType=?,@TravelerName=?,@BU=?,@ApprovedAmount=?,@AllocateToAnotherProfitCenter=?,@AllocationBU=?,@JournalAmount=?;",
+      "gssdata": "EXEC jde.AddGssPayment @DocCompany=?,@Source=?,@CirculusDocId=?,@BatchCreator=?,@DocNumber=?,@DocType=?,@CompCode=?,@VendorId=?,@VendorName=?,@AddlIndTaxId=?,@TaxId=?,@GlDate=?,@InvoiceNumber=?,@Currency=?,@InvGrossAmt=?,@PayDate=?,@InvDate=?,@DueDate=?,@PayStatus=?,@BatchNumber=?,@BatchType=?,@CurrencyCode=?,@GlAmt=?,@GlSubLedger=?,@GlSubLedgerType=?,@BusinessUnit=?,@ObjectAccount=?,@SubAccount=?,@CheckNum=?,@CheckAmt=?,@CheckDate=?,@Remark=?,@MailingName=?,@SearchType=?,@VendorType=?,@AddressLine1=?,@AddressLine2=?,@AddressLine3=?,@City=?,@State=?,@Country=?,@PaymentInstrument=?;",
+      "paydata": "EXEC pay.DataInsertion @PayDate=?,@EmpId=?,@BuNum=?,@ElemName=?,@ElemValue=?;",
+      "pex_c": "EXEC pay.CharityAdd @EmployeeNum=?,@Charity=?;",
+      "pex_s": "EXEC pay.StaffAssocAdd @EmployeeNum=?, @StaffAssoc=?;",
+      "gl": "EXEC jde.AddGlDetails @CompanyNo=?,@BUNo=?,@AccountNo=?,@SubledgerType=?,@Subledger=?,@DocumentHeaderText=?,@LineItemText=?,@GLDate=?,@GLMonth=?,@GLYear=?,@PostDate=?,@PostTime=?,@TranCode=?,@VoidReverse=?,@BatchNo=?,@DocumentNo=?,@Preparer=?,@Poster=?,@Ledger=?,@DocCurrency=?,@LedgerCurrency=?,@CompanyCurrency=?,@DebitAmount=?,@CreditAmount=?,@NetAmount=?;",
+      "tb": "EXEC jde.AddTrialBalance @GLMonth=?,@GLYear=?,@Company=?,@BUNo=?,@AccountNo=?,@AA=?,@AR=?,@BA=?,@CA=?,@CR=?,@XA=?,@XR=?;",
+      "tb_bs": "EXEC jde.AddTrialBalanceBS @GLMonth=?,@GLYear=?,@Company=?,@BUNo=?,@AccountNo=?,@LedgerCurrency=?,@SubledgerType=?,@Subledger=?,@AA=?,@CA=?,@XA=?;",
+      "tb_ic": "EXEC jde.AddTrialBalanceIC @GLMonth=?,@GLYear=?,@Company=?,@BUNo=?,@AccountNo=?,@LedgerCurrency=?,@SubledgerType=?,@Subledger=?,@AA=?,@CA=?,@XA=?;"
+    },
+    "prerun": {
+      "concurdata": "EXEC jde.ClearConcurDetails @PaidDate=?;",
+      "gssdata": "EXEC jde.ClearGssData @PayDate=?;",
+      "paydata": "EXEC pay.PayDateDataClear @PayDate=?;",
+      "gl": "EXEC jde.ClearGlDetails @AcctMonth=?;",
+      "tb": "EXEC jde.ClearTrialBalance @AcctMonth=?;",
+      "tb_bs": "EXEC jde.ClearTrialBalanceBS @AcctMonth=?;",
+      "tb_ic": "EXEC jde.ClearTrialBalanceIC @AcctMonth=?;"
+    },
+    "retrieve": {
+      "pex_g": {
+        "details": "EXEC pay.GarnishmentDetails @PayDate=?;"
+      },
+      "pex_c": {
+        "details": "EXEC pay.CharitySummary @PayDate=?;",
+        "review": "EXEC pay.CharityCheck @PayDate=?;"
+      },
+      "pex_s": {
+        "details": "EXEC pay.StaffAssocSummary @PayDate=?;",
+        "review": "EXEC pay.StaffAssocCheck @PayDate=?;"
+      }
+    },
+    "options": {
+      "pex_c": {
+        "1": "London",
+        "2": "Markham",
+        "3": "Calgary",
+        "4": "Halifax",
+        "5": "Dieppe",
+        "6": "Hartland",
+        "7": "Victoria"
+      },
+      "pex_s": {
+        "1": "London",
+        "2": "Calgary",
+        "3": "Halifax",
+        "4": "Dieppe",
+        "5": "Hartland"
+      }
+    }
+  },
+  "hashupdate": {
+    "policycm": "EXEC ams.ApplyHashPol;",
+    "prodcm": "EXEC ams.ApplyHashProdCm;"
+  },
+  "groupupdate": {
+    "prodcm": "EXEC ams.ApplyOfficeGroupProdCm;",
+    "prodsr": "EXEC ams.ApplyOfficeGroupProdSR;",
+    "policynew": "EXEC ams.ApplyOfficeGroupPolicy;",
+    "policymod": "EXEC ams.ApplyOfficeGroupPolicy;",
+    "policycm": "EXEC ams.ApplyOfficeGroupPolicy;",
+    "me_ap": "EXEC ams.ApplyOfficeGroupAP;",
+    "me_ar": "EXEC ams.ApplyOfficeGroupAR;",
+    "me_cp": "EXEC ams.ApplyOfficeGroupCP;",
+    "me_gp": "EXEC ams.ApplyOfficeGroupGP;",
+    "me_tb": "EXEC ams.ApplyOfficeGroupAmsGl;",
+    "me_gl": "EXEC ams.ApplyOfficeGroupAmsTb;"
+  },
+  "Epic": {
+    "insert": {
+      "broker": "EXEC ams.AddUpdateBroker @AmsSystem=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?,@ReceivablePayable=?;",
+      "ebroker": "EXEC ams.AddUpdateBrokerE @AmsSystem=?,@UniqEntity=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?,@AmsSubAccount=?;",
+      "clientnew": "EXEC ams.AddUpdateClient @AmsSystem=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?;",
+      "clientmod": "EXEC ams.AddUpdateClient @AmsSystem=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?;",
+      "eclient": "EXEC ams.AddUpdateClientE @AmsSystem=?,@UniqEntity=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?;",
+      "company": "EXEC ams.AddUpdateCompany @AmsSystem=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?,@IsIssuingCompany=?,@IsBillingCompany=?,@AllowOnNewBus=?,@AllowOnRenewalBus=?;",
+      "ecompany": "EXEC ams.AddUpdateCompanyE @AmsSystem=?,@UniqEntity=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?,@AmsSubAccount=?;",
+      "employee": "EXEC ams.AddUpdateEmployee @AmsSystem=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@FirstName=?,@LastName=?,@Department=?,@ServicingRole=?,@AllowOnNewBus=?,@AllowOnRenewalBus=?,@CommissionableProducer=?,@Reconcile=?,@AutomaticallyPostToGL=?,@ShareRevenue=?;",
+      "finco": "EXEC ams.AddUpdateFinanceCompany @AmsSystem=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?;",
+      "vendor": "EXEC ams.AddUpdateVendor @AmsSystem=?,@LookupCode=?,@ConversionPriorAccountID=?,@ActiveInactiveStatus=?,@DateEntered=?,@ConversionDate=?,@LastUpdated=?,@AccountName=?,@GovernmentEntity=?,@GovernmentEntityGLSubAccount=?,@Address1=?,@Address2=?,@Address3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?;",
+      "policynew": "EXEC ams.AddPolicy @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@LookupCode=?,@ConversionPriorAccountID=?,@ConversionDate=?,@SrvCSRCode=?,@SrvPrCode=?,@SrvAMCode=?,@MainPolicyNumber=?,@PolicyNumber=?,@PolicyTypeCode=?,@EffectiveDate=?,@ExpirationDate=?,@EnteredDateTime=?,@LastUpdated=?,@LineTypeCode=?,@BillMode=?,@LineStatusCode=?,@IssuingState=?,@IssuingCountry=?,@AgencyFirstWritten=?,@PremPayType=?,@PremiumPayableCode=?,@IssuingCompanyCode=?,@TypeCode=?,@CommPercent=?,@Amount=?,@ServiceSummaryNumber=?,@SrvSumAction=?,@SrvSumEffectiveDate=?;",
+      "policymod": "EXEC ams.AddUpdatePolicy @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@LookupCode=?,@ConversionPriorAccountID=?,@ConversionDate=?,@SrvCSRCode=?,@SrvPrCode=?,@SrvAMCode=?,@MainPolicyNumber=?,@PolicyNumber=?,@PolicyTypeCode=?,@EffectiveDate=?,@ExpirationDate=?,@EnteredDateTime=?,@LastUpdated=?,@LineTypeCode=?,@BillMode=?,@LineStatusCode=?,@IssuingState=?,@IssuingCountry=?,@AgencyFirstWritten=?,@PremPayType=?,@PremiumPayableCode=?,@IssuingCompanyCode=?,@TypeCode=?,@CommPercent=?,@Amount=?,@ServiceSummaryNumber=?,@SrvSumAction=?,@SrvSumEffectiveDate=?;",
+      "policycm": "EXEC ams.AddPolicyCurrent @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@LookupCode=?,@ConversionPriorAccountID=?,@ConversionDate=?,@SrvCSRCode=?,@SrvPrCode=?,@SrvAMCode=?,@MainPolicyNumber=?,@PolicyNumber=?,@PolicyTypeCode=?,@EffectiveDate=?,@ExpirationDate=?,@EnteredDateTime=?,@LastUpdated=?,@LineTypeCode=?,@BillMode=?,@LineStatusCode=?,@IssuingState=?,@IssuingCountry=?,@AgencyFirstWritten=?,@PremPayType=?,@PremiumPayableCode=?,@IssuingCompanyCode=?,@TypeCode=?,@CommPercent=?,@Amount=?,@ServiceSummaryNumber=?,@SrvSumAction=?,@SrvSumEffectiveDate=?;",
+      "prod": "EXEC ams.AddProductionCurrent @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@BillToCode=?,@AccountType=?,@LookupCode=?,@PolicyTypeCode=?,@MainPolicyNumber=?,@EffectiveDate=?,@ExpirationDate=?,@LineTypeCode=?,@LineStatusCode=?,@SrvSumAction=?,@SrvSumEffectiveDate=?,@ClassCode=?,@TransactionCode=?,@ItemNumber=?,@InvoiceNumber=?,@ReversedFlag=?,@BillMode=?,@TranEffectiveDate=?,@InstallmentEffectiveDate=?,@TransDateEntered=?,@ARDueDate=?,@AccountingMonth=?,@TaxFeeTransCode=?,@GovernmentEntityCode=?,@StateProvince=?,@TaxableTransCode=?,@TaxableTransItemNumber=?,@IssuingCompanyCode=?,@PremiumPayableCode=?,@PrBrType=?,@PrBrCode=?,@ProductionCredit=?,@CommissionPercent=?,@CommissionAmount=?,@AgencyCommissionPercent=?,@AgencyCommissionAmount=?,@AgencyCommissionAmountNetBr=?,@TransAmount=?,@TaxableAmount=?,@RateTypeCode=?,@RatePercentAmount=?;",
+      "prodcm": "EXEC ams.AddProductionCurrent @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@BillToCode=?,@AccountType=?,@LookupCode=?,@PolicyTypeCode=?,@MainPolicyNumber=?,@EffectiveDate=?,@ExpirationDate=?,@LineTypeCode=?,@LineStatusCode=?,@SrvSumAction=?,@SrvSumEffectiveDate=?,@ClassCode=?,@TransactionCode=?,@ItemNumber=?,@InvoiceNumber=?,@ReversedFlag=?,@BillMode=?,@TranEffectiveDate=?,@InstallmentEffectiveDate=?,@TransDateEntered=?,@ARDueDate=?,@AccountingMonth=?,@TaxFeeTransCode=?,@GovernmentEntityCode=?,@StateProvince=?,@TaxableTransCode=?,@TaxableTransItemNumber=?,@IssuingCompanyCode=?,@PremiumPayableCode=?,@PrBrType=?,@PrBrCode=?,@ProductionCredit=?,@CommissionPercent=?,@CommissionAmount=?,@AgencyCommissionPercent=?,@AgencyCommissionAmount=?,@AgencyCommissionAmountNetBr=?,@TransAmount=?,@TaxableAmount=?,@RateTypeCode=?,@RatePercentAmount=?;",
+      "prodsr": "EXEC ams.AddProductionShareRev @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@RevReceivingAgcyCode=?,@RevReceivingBrchCode=?,@RevReceivingDeptCode=?,@RevReceivingPrftCtrCode=?,@BillToCode=?,@AccountType=?,@LookupCode=?,@PolicyTypeCode=?,@MainPolicyNumber=?,@EffectiveDate=?,@ExpirationDate=?,@LineTypeCode=?,@LineStatusCode=?,@SrvSumAction=?,@SrvSumEffectiveDate=?,@ClassCode=?,@TransactionCode=?,@ItemNumber=?,@InvoiceNumber=?,@ReversedFlag=?,@BillMode=?,@TranEffectiveDate=?,@InstallmentEffectiveDate=?,@TransDateEntered=?,@ARDueDate=?,@AccountingMonth=?,@IssuingCompanyCode=?,@PremiumPayableCode=?,@PrBrType=?,@PrBrCode=?,@ProductionCredit=?,@CommissionPercent=?,@CommissionAmount=?,@RevenuePct=?,@ShareTransAmt=?,@AggregateRevenueSplitAmt=?,@BrExpAllocated=?,@ShareRevAmtNetBr=?;",
+      "me_ap": "EXEC ams.AddBalancingPremiumPayables @AmsSystem=?,@MonthEnd=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@PremPayType=?,@PremiumPayableCode=?,@GeneralLedgerPayablesAccount=?,@BillToCode=?,@LookupCode=?,@ItemNumber=?,@ReversedFlag=?,@InvoiceNumber=?,@ClassCode=?,@Code=?,@EffectiveDate=?,@TranEffectiveDate=?,@InstallmentEffectiveDate=?,@GenerateInvoiceDate=?,@TransDateEntered=?,@ARDueDate=?,@AccountingMonth=?,@PolicyTypeCode=?,@LineTypeCode=?,@MainPolicyNumber=?,@IssuingCompanyCode=?,@TransactionAmount=?,@ReceivableBalance=?,@AgencyCommissionPercent=?,@AgencyCommissionAmount=?,@PayablePaid=?,@PayableBalance=?;",
+      "me_ar": "EXEC ams.AddBalancingReceivables @AmsSystem=?,@MonthEnd=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@AccountType=?,@BillToCode=?,@LookupCode=?,@ProducerCode=?,@ItemNumber=?,@ReversedFlag=?,@InvoiceNumber=?,@ClassCode=?,@TransactionCode=?,@EffectiveDate=?,@TranEffectiveDate=?,@InstallmentEffectiveDate=?,@GenerateInvoiceDate=?,@TransDateEntered=?,@ARDueDate=?,@AccountingMonth=?,@PolicyTypeCode=?,@LineTypeCode=?,@MainPolicyNumber=?,@IssuingCompanyCode=?,@PremPayType=?,@PremiumPayableCode=?,@Amount=?,@Balance=?,@AgencyCommissionPercent=?,@AgencyCommissionAmount=?,@AgencyCommissionAmountNetBr=?;",
+      "me_cp": "EXEC ams.AddBalancingCommissionPayables @AmsSystem=?,@MonthEnd=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@PrBrType=?,@PrBrCode=?,@GLPrBrPayablesAccount=?,@BillToCode=?,@LookupCode=?,@ItemNumber=?,@ReversedFlag=?,@InvoiceNumber=?,@ClassCode=?,@Code=?,@EffectiveDate=?,@TranEffectiveDate=?,@InstallmentEffectiveDate=?,@GenerateInvoiceDate=?,@TransDateEntered=?,@ARDueDate=?,@AccountingMonth=?,@PolicyTypeCode=?,@LineTypeCode=?,@MainPolicyNumber=?,@IssuingCompanyCode=?,@PremiumPayableCode=?,@Amount=?,@ReceivableBalance=?,@AgencyCommissionAmount=?,@AgencyCommissionAmountNetBr=?,@CommissionType=?,@CommissionPercent=?,@PrBrComAmtDue=?,@PayablePaid=?,@PayableBalance=?;",
+      "me_gp": "EXEC ams.AddBalancingGovernmentPayables @AmsSystem=?,@MonthEnd=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@GovernmentEntityCode=?,@GLGovernmentPayablesAccount=?,@BillToCode=?,@LookupCode=?,@ItemNumber=?,@ReversedFlag=?,@InvoiceNumber=?,@ClassCode=?,@Code=?,@EffectiveDate=?,@TranEffectiveDate=?,@InstallmentEffectiveDate=?,@GenerateInvoiceDate=?,@TransDateEntered=?,@ARDueDate=?,@AccountingMonth=?,@PolicyTypeCode=?,@LineTypeCode=?,@MainPolicyNumber=?,@IssuingCompanyCode=?,@PremPayType=?,@PremiumPayableCode=?,@TaxableTransCode=?,@TaxableAmount=?,@RatePercentAmount=?,@StateProvince=?,@Amount=?,@ReceivableBalance=?,@PayablePaid=?,@PayableBalance=?;",
+      "me_tb": "EXEC ams.AddTrialBalance @AmsSystem=?,@MonthEnd=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@AccountGroupCode=?,@TitleAccount=?,@GLAccount=?,@BeginningBalance=?,@Debit=?,@Credit=?,@Amount=?,@EndingBalanceAmount=?;",
+      "me_gl": "EXEC ams.AddGlDetails @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@AccountGroupCode=?,@TitleAccount=?,@GLAccount=?,@GLEntryType=?,@ReferNumber=?,@VoidNumber=?,@ReversedFlag=?,@AccountingMonth=?,@EnteredDate=?,@EffectiveDate=?,@CheckNumberPayID=?,@PayeeCode=?,@EntryDescription=?,@DetailDescription=?,@DebitAmount=?,@CreditAmount=?;",
+      "me_disb": "EXEC ams.AddDisbursement @AmsSystem=?,@AgencyCode=?,@BankAccount=?,@CheckNumberPayID=?,@ReferNumber=?,@GLEntryType=?,@PayeeType=?,@PayeeCode=?,@AccountName=?,@PayeeContactName=?,@AddressLine1=?,@AddressLine2=?,@AddressLine3=?,@City=?,@StateCode=?,@RegionProvince=?,@PostalCode=?,@CountryCode=?,@AccountingMonth=?,@EffectiveDate=?,@DatePrinted=?,@DateLastPrinted=?,@VoidNumber=?,@ReversedFlag=?,@DetailDescription=?,@DebitAmount=?,@CreditAmount=?;",
+      "fdw_bu": "EXEC ams.AddUpdateFdwBu @AmsSystem=?,@AmsStructure=?,@JdeCode=?;",
+      "fdw_gl": "EXEC ams.AddUpdateFdwGl @AmsSystem=?,@AmsAccount=?,@JdeAccount=?;",
+      "coa": "EXEC ams.AddUpdateChartOfAccounts @AmsSystem=?,@AccountGroupCode=?,@AccountGroupDescription=?,@TitleAccount=?,@TitleAccountDescription=?,@Account=?,@AccountDescription=?;"
+    },
+    "prerun": {
+      "policynew": "EXEC ams.ClearEpicPolicy @InputDate=?, @AmsSystem=?;",
+      "prodcm": "EXEC ams.ClearEpicProductionCm @InputDate=?, @AmsSystem=?;",
+      "prodsr": "EXEC ams.ClearEpicProductionSR @InputDate=?, @AmsSystem=?;",
+      "me_ap": "EXEC ams.ClearBalancingPremiumPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_ar": "EXEC ams.ClearBalancingReceivables @MonthEnd=?, @AmsSystem=?;",
+      "me_cp": "EXEC ams.ClearBalancingCommissionPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_gp": "EXEC ams.ClearBalancingGovernmentPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_tb": "EXEC ams.ClearTrialBalance @MonthEnd=?, @AmsSystem=?;",
+      "me_gl": "EXEC ams.ClearGlDetails @MonthEnd=?, @AmsSystem=?;",
+      "me_disb": "EXEC ams.ClearDisbursement @MonthEnd=?, @AmsSystem=?;"
+    },
+    "update": {
+      "placeholder": ""
+    }
+  },
+  "Sig": {
+    "insert": {
+      "clientnew": "EXEC ams.AddUpdateClient_SIG @AmsSystem=?,@LookupCode=?,@ActiveInactiveStatus=?,@DateEntered=?,@AccountName=?,@Address1=?,@Address2=?,@City=?,@StateCode=?,@PostalCode=?,@CountryCode=?;",
+      "prod": "",
+      "prodcm": "EXEC ams.AddProductionCurrent @AmsSystem=?,@AgencyCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@LookupCode=?,@PolicyTypeCode=?,@MainPolicyNumber=?,@EffectiveDate=?,@ExpirationDate=?,@LineTypeCode=?,@LineStatusCode=?,@TransactionCode=?,@InvoiceNumber=?,@BillMode=?,@TranEffectiveDate=?,@AccountingMonth=?,@IssuingCompanyCode=?,@PremiumPayableCode=?,@AgencyCommissionPercent=?,@AgencyCommissionAmount=?,@AgencyCommissionAmountNetBr=?,@TransAmount=?,@ClientReview=1,@AccountName=?;"
+    },
+    "postrun": {
+      "country": "EXEC ams.Post_AddCountryCode @AmsSystem=?,@table_name=?;"
+    },
+    "prerun": {
+      "prodcm": "EXEC ams.ClearEpicProductionCm_AcctMo @AcctMo=?, @AmsSystem=?;",
+      "me_ap": "EXEC ams.ClearBalancingPremiumPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_ar": "EXEC ams.ClearBalancingReceivables @MonthEnd=?, @AmsSystem=?;",
+      "me_cp": "EXEC ams.ClearBalancingCommissionPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_tb": "EXEC ams.ClearTrialBalance @MonthEnd=?, @AmsSystem=?;",
+      "me_gl": "EXEC ams.ClearGlDetails @MonthEnd=?, @AmsSystem=?;",
+      "me_disb": "EXEC ams.ClearDisbursement @MonthEnd=?, @AmsSystem=?;"
+    },
+    "update": {
+      "client": "",
+      "prod": "",
+      "prodcm": ""
+    },
+    "hashupdate": {
+      "client": "",
+      "prod": "",
+      "prodcm": ""
+    },
+    "hashquery": {
+      "client": "",
+      "prod": "",
+      "prodcm": ""
+    },
+    "retrieve": {
+      "client": "",
+      "prod": "",
+      "prodcm": ""
+    },
+    "options": {
+      "client": "",
+      "prod": "",
+      "prodcm": ""
+    }
+  },
+  "TUW": {
+    "insert": {
+      "budget": "",
+      "broker": "EXEC ams.AddUpdateBroker @AmsSystem=?,@LookupCode=?,@AccountName=?,@Address1=?,@City=?,@StateCode=?,@PostalCode=?;",
+      "clientnew": "EXEC ams.AddUpdateClient @AmsSystem=?,@LookupCode=?,@AccountName=?,@Address1=?,@City=?,@StateCode=?,@PostalCode=?;",
+      "clientmod": "",
+      "company": "EXEC ams.AddUpdateCompany @AmsSystem=?,@LookupCode=?,@AccountName=?,@Address1=?,@City=?,@StateCode=?,@PostalCode=?,@CountryCode=?;",
+      "vendor": "EXEC ams.AddUpdateVendor @AmsSystem=?,@LookupCode=?,@AccountName=?,@Address1=?,@City=?,@StateCode=?,@PostalCode=?;",
+      "policy": "",
+      "policycm": "",
+      "prod": "",
+      "prodcm": "EXEC ams.AddProductionCurrent @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@BillToCode=?,@LookupCode=?,@PolicyTypeCode=?,@MainPolicyNumber=?,@EffectiveDate=?,@LineTypeCode=?,@TransactionCode=?,@BillMode=?,@TranEffectiveDate=?,@AccountingMonth=?,@IssuingCompanyCode=?,@PremiumPayableCode=?,@AgencyCommissionPercent=?,@AgencyCommissionAmountNetBr=?,@TransAmount=?,@ClientReview=1,@AccountName=?;",
+      "me_brokerpay": ""
+    },
+    "prerun": {
+      "prodcm": "EXEC ams.ClearEpicProductionCm_AcctMo @AcctMo=?, @AmsSystem=?;",
+      "me_ap": "EXEC ams.ClearBalancingPremiumPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_ar": "EXEC ams.ClearBalancingReceivables @MonthEnd=?, @AmsSystem=?;",
+      "me_cp": "EXEC ams.ClearBalancingCommissionPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_tb": "EXEC ams.ClearTrialBalance @MonthEnd=?, @AmsSystem=?;",
+      "me_gl": "EXEC ams.ClearGlDetails @MonthEnd=?, @AmsSystem=?;",
+      "me_disb": "EXEC ams.ClearDisbursement @MonthEnd=?, @AmsSystem=?;"
+    },
+    "update": {
+      "placeholder": ""
+    }
+  },
+  "TAM": {
+    "insert": {
+      "broker": "EXEC ams.AddUpdateBroker @Ams=?,@Code=?,@Acnm=?,@Add1=?,@City=?,@Prov=?,@Post=?;",
+      "clientnew": "EXEC ams.AddUpdateClient @Ams=?,@Code=?,@Acnm=?,@Add1=?,@City=?,@Prov=?,@Post=?;",
+      "clientmod": "EXEC ams.AddUpdateClient @Ams=?,@Code=?,@Acnm=?,@Add1=?,@City=?,@Prov=?,@Post=?;",
+      "company": "EXEC ams.AddUpdateCompany @Ams=?,@Code=?,@Acnm=?,@Add1=?,@City=?,@Prov=?,@Post=?;",
+      "employee": "",
+      "finco": "EXEC ams.AddUpdateFinanceCompany @Ams=?,@Code=?,@Acnm=?,@Add1=?,@City=?,@Prov=?,@Post=?;",
+      "vendor": "",
+      "policynew": "",
+      "policymod": "",
+      "policycm": "",
+      "prodcm": "EXEC ams.AddProductionLegacy @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@TransactionCode=?,@AccountingMonth=?,@BillMode=?,@ProfitCenterCode=?,@ItemNumber=?,@EffectiveDate=?,@TranEffectiveDate=?,@PrBrCode=?,@CommissionAmount=?,@CommissionPercent=?,@PrBrType=?,@AgencyCommissionAmountNetBr=?,@ClassCode=?,@AgencyCommissionPercent=?,@AgencyCommissionAmount=?,@TransAmount=?,@IssuingCompanyCode=?,@LineTypeCode=?,@MainPolicyNumber=?,@LookupCode=?;",
+      "me_ap": "",
+      "me_ar": "",
+      "me_cp": "",
+      "me_gp": "",
+      "me_tb": "",
+      "me_gl": "",
+      "me_disb": "",
+      "fdw_bu": "",
+      "fdw_gl": ""
+    },
+    "prerun": {
+      "policynew": "EXEC ams.ClearEpicPolicy @InputDate=?, @AmsSystem=?;",
+      "policycm": "EXEC ams.ClearEpicPolicyCm @InputDate=?, @AmsSystem=?;",
+      "prodcm": "EXEC ams.ClearEpicProductionCm @InputDate=?, @AmsSystem=?;",
+      "me_ap": "EXEC ams.ClearBalancingPremiumPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_ar": "EXEC ams.ClearBalancingReceivables @MonthEnd=?, @AmsSystem=?;",
+      "me_cp": "EXEC ams.ClearBalancingCommissionPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_gp": "EXEC ams.ClearBalancingGovernmentPayables @MonthEnd=?, @AmsSystem=?;",
+      "me_tb": "EXEC ams.ClearTrialBalance @MonthEnd=?, @AmsSystem=?;",
+      "me_gl": "EXEC ams.ClearGlDetails @MonthEnd=?, @AmsSystem=?;",
+      "me_disb": "EXEC ams.ClearDisbursement @MonthEnd=?, @AmsSystem=?;"
+    },
+    "update": {
+      "placeholder": ""
+    }
+  }
+}

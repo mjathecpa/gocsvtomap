@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"encoding/csv"
+	"encoding/json"
 	"fmt"
 	"io"
 	"os"
@@ -70,7 +71,7 @@ func CSVFileToMap(csvData *csv.Reader) (returnMap []map[string]string, err error
 	return
 }
 
-func PrintMap(dataMap []map[string]string) {
+func PrintMap(dataMap []map[string]interface{}) {
 	// loop over elements of slice
 	for _, m := range dataMap {
 
@@ -82,11 +83,69 @@ func PrintMap(dataMap []map[string]string) {
 	}
 }
 
+func PrintSlice(dataMap []map[string]interface{}) {
+	fmt.Println(dataMap[0])
+}
+
+func PrintPiece(dataMap []map[string]interface{}) {
+	fmt.Println(dataMap[0]["CreditAmount"])
+}
+
+func MapFromJson() {
+	jsonStr := `{
+        "fruits" : {
+            "a": "apple",
+            "b": "banana"
+        },
+        "colors" : {
+            "r": "red",
+            "g": "green"
+        }
+    }`
+
+	var x map[string]interface{}
+
+	json.Unmarshal([]byte(jsonStr), &x)
+	fmt.Println(x)
+}
+
+func JsonFromFile(fileName string) []byte {
+	// Open our jsonFile
+	jsonFile, err := os.Open(fileName)
+	// if we os.Open returns an error then handle it
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Printf("Successfully Opened %s", fileName)
+	// defer the closing of our jsonFile so that we can parse it later on
+	defer jsonFile.Close()
+	byteResult, _ := io.ReadAll(jsonFile)
+	return byteResult
+}
+
+func MapFromJsonFile(jsonFile []byte) {
+	jsonStr := jsonFile
+
+	var x map[string]interface{}
+
+	json.Unmarshal([]byte(jsonStr), &x)
+	fmt.Println(x)
+}
+
+// func JsonSlice(jsonFile []byte) {
+// 	jsonStr := jsonFile
+
+// 	var x map[string]interface{}
+
+// 	json.Unmarshal([]byte(jsonStr), &x)
+// 	fmt.Println(x)
+// }
+
 func main() {
-	f := OpenCsvFile("./testdata_short.csv")
+	//f := OpenCsvFile("./testdata_short.csv")
 	//DataToConsole(f)
-	m, _ := CSVFileToMap(f)
-
-	PrintMap(m)
-
+	//m, _ := CSVFileToMap(f)
+	//PrintSlice(m)
+	j := JsonFromFile("./sql_statements_short.json")
+	MapFromJsonFile(j)
 }

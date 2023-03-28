@@ -1,0 +1,22 @@
+{
+  "JDE": {
+    "insert": {
+      "budget": "EXEC bgt.AddBudgetDetails @BudgetYear=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@ClientCode=?,@LookupCode=?,@ProducerCode=?,@SrvPrCode=?,@BusinessLine=?,@Currency=?,@AccountingMonth=?,@BudgetAmount=?,@Status=?;",
+      "pex_c": "EXEC pay.CharityAdd @EmployeeNum=?,@Charity=?;",
+      "tb": "EXEC jde.AddTrialBalance @GLMonth=?,@GLYear=?,@Company=?,@BUNo=?,@AccountNo=?,@AA=?,@AR=?,@BA=?,@CA=?,@CR=?,@XA=?,@XR=?;"
+    },
+    "prerun": {
+      "tb": "EXEC jde.ClearTrialBalance @AcctMonth=?;"
+    }
+  },
+  "Epic": {
+    "insert": {
+      "prodcm": "EXEC ams.AddProductionCurrent @AmsSystem=?,@AgencyCode=?,@BranchCode=?,@DepartmentCode=?,@ProfitCenterCode=?,@BillToCode=?,@AccountType=?,@LookupCode=?,@PolicyTypeCode=?,@MainPolicyNumber=?,@EffectiveDate=?,@ExpirationDate=?,@LineTypeCode=?,@LineStatusCode=?,@SrvSumAction=?,@SrvSumEffectiveDate=?,@ClassCode=?,@TransactionCode=?,@ItemNumber=?,@InvoiceNumber=?,@ReversedFlag=?,@BillMode=?,@TranEffectiveDate=?,@InstallmentEffectiveDate=?,@TransDateEntered=?,@ARDueDate=?,@AccountingMonth=?,@TaxFeeTransCode=?,@GovernmentEntityCode=?,@StateProvince=?,@TaxableTransCode=?,@TaxableTransItemNumber=?,@IssuingCompanyCode=?,@PremiumPayableCode=?,@PrBrType=?,@PrBrCode=?,@ProductionCredit=?,@CommissionPercent=?,@CommissionAmount=?,@AgencyCommissionPercent=?,@AgencyCommissionAmount=?,@AgencyCommissionAmountNetBr=?,@TransAmount=?,@TaxableAmount=?,@RateTypeCode=?,@RatePercentAmount=?;",
+      "fdw_bu": "EXEC ams.AddUpdateFdwBu @AmsSystem=?,@AmsStructure=?,@JdeCode=?;",
+      "fdw_gl": "EXEC ams.AddUpdateFdwGl @AmsSystem=?,@AmsAccount=?,@JdeAccount=?;"
+    },
+    "prerun": {
+      "prodcm": "EXEC ams.ClearEpicProductionCm @InputDate=?, @AmsSystem=?;"
+    }
+  }
+}
