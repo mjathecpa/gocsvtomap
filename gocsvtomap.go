@@ -34,9 +34,23 @@ func DataToConsole(csvData *csv.Reader) {
 		fmt.Println(record)
 		fmt.Println(len(record))
 		for value := range record {
-			fmt.Printf("  %v,", record[value])
+			fmt.Printf("  %v,\n", record[value])
 		}
 		//fmt.Println(record[2]) // display position 2 items
+	}
+}
+
+func IterateCSV(csvData *csv.Reader){
+	for {
+		record, err := csvData.Read()
+		// Stop at EOF.
+		if err == io.EOF {
+			break
+		}
+		// ... Display all individual elements of the slice.
+		for value := range record {
+			fmt.Printf("%v\n", record[value])
+		}
 	}
 }
 
@@ -142,10 +156,13 @@ func MapFromJsonFile(jsonFile []byte) {
 // }
 
 func main() {
-	//f := OpenCsvFile("./testdata_short.csv")
+	f := OpenCsvFile("./testdata_short.csv")
 	//DataToConsole(f)
+	IterateCSV(f)
 	//m, _ := CSVFileToMap(f)
 	//PrintSlice(m)
-	j := JsonFromFile("./sql_statements_short.json")
-	MapFromJsonFile(j)
+
+	// 2023-08-26 - the below works perfect
+	//j := JsonFromFile("./sql_statements_short.json")
+	//MapFromJsonFile(j)
 }
